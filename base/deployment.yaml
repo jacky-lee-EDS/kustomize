@@ -13,6 +13,6 @@ spec:
       labels:
         deployment: hello
     spec:
-      containers:q
+      containers:
       - name: the-container
         image: quay.io/jacky_lee_eds/nginx:1.27.4
