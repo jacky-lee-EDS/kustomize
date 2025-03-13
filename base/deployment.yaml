@@ -16,3 +16,6 @@ spec:
       containers:
       - name: the-container
         image: quay.io/jacky_lee_eds/nginx:1.27.4
+        securityContext:
+          runAsGroup: 0
+          runAsUser: 0
