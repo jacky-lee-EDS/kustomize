@@ -1,0 +1,10 @@
+namePrefix: production-           # 設定各個resource name的前綴
+commonLabels:                     # 所有的resource都會被打上這個label
+  variant: production
+  org: acmeCorporation
+commonAnnotations:                # 所有的resource都會被打上這個Annotations
+  note: Hello, I am production!
+resources:                        # resources YAML的存放位置
+- ../../base
+patchesStrategicMerge:            # 要被讀取進來的新設定檔
+- deployment.yaml
