@@ -7,4 +7,3 @@ commonLabels:
 
 resources:        # 設定有哪些yaml檔案
 - deployment.yaml
-- sa.yaml
