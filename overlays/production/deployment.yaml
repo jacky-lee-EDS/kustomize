@@ -1,7 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: the-deployment
-  namespace: nginx-helloworld
+  name: production
 spec:
   replicas: 3
