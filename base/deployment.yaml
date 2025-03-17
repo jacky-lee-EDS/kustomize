@@ -6,13 +6,12 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      deployment: hello
+      app: hello
   template:
     metadata:
       labels:
-        deployment: hello
+        app: hello
     spec:
-      serviceAccount: admin
       containers:
       - name: base
         image: quay.io/jacky_lee_eds/nginx:1.27.4-1
