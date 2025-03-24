@@ -1,6 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: production
+  name: nginx
+  annotations:
+    env: prod
+  labels:
+    env: prod
 spec:
   replicas: 3
