@@ -1,7 +1,5 @@
-namePrefix: production-           # 設定各個resource name的前綴
-commonLabels:                     # 所有的resource都會被打上這個label
-  variant: production
-  org: acmeCorporation
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
 commonAnnotations:                # 所有的resource都會被打上這個Annotations
   note: Hello, I am production!
 resources:                        # resources YAML的存放位置
