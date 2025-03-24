@@ -6,12 +6,20 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello
+      app: nginx
   template:
     metadata:
       labels:
-        app: hello
+        app: nginx
     spec:
       containers:
-      - name: base
-        image: quay.io/jacky_lee_eds/nginx:1.27.4-1
+      - name: nginx
+        image: quay.io/jacky_lee_eds/nginx:1.27.4-1  # 確保使用 unprivileged 版本
+        ports:
+        - containerPort: 8082
+        volumeMounts:
+        - mountPath: /var/cache/nginx
+          name: nginx-cache
+      volumes:
+      - name: nginx-cache
+        emptyDir: {}  # OpenShift 會自動處理權限
